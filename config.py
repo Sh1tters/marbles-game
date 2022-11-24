@@ -3,4 +3,4 @@
 width = 800
 height = 800
 backgroundColor = 0x38abe2
-frameRate = 60
+frameRate = 120
