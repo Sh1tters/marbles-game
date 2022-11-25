@@ -13,6 +13,7 @@ class Player(pygame.sprite.Sprite):
         area = pygame.display.get_surface().get_rect()
         self.width, self.height = area.width, area.height
         self.counter = 0
+        self.delta = [0, 0] # Takes [-20, 0], [20, 0], [0, -20], [0, 20]
 
     def fixImage(self, image):
         return pygame.transform.scale(image, (50, 50))
@@ -22,6 +23,11 @@ class Player(pygame.sprite.Sprite):
         self.surface.blit(self.image, self.rect)
 
     def apply_gravity(self):
+        # Control delta (X,Y)
+        self.speed[0] += self.delta[0]
+        self.speed[1] += self.delta[1]
+
+        # Control friction
         self.speed = [self.friction*s for s in self.speed]
         self.speed[1] += self.gravity
 
@@ -36,8 +42,9 @@ class Player(pygame.sprite.Sprite):
             tolerance = 5
             # Check for tolerance
             if self.rect.bottom + tolerance > self.height: # Make ball lay still horizontal from a counter
+                print(self.rect.bottom, self.height)
                 self.counter += 1
-                if self.counter > 15:
+                if self.counter > 30:
                     # reset counter
                     self.counter = 0
                     
