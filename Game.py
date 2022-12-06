@@ -1,7 +1,8 @@
 import pygame
 from config import *
 from Player import Player
-    
+
+# INIT
 pygame.init()    
 surface = pygame.display.set_mode((width, height))    
 clock = pygame.time.Clock()  
