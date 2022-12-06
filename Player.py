@@ -60,7 +60,6 @@ class Player(pygame.sprite.Sprite):
         self.rect.bottom = self.clip(self.rect.bottom, 0, self.height)  
 
     def updatePlayer(self):
-        # Apply gravity
         self.apply_gravity()
         self.drawPlayer()
 
