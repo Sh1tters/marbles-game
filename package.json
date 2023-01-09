@@ -1,0 +1,23 @@
+{
+  "name": "marbles-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sh1tters/marbles-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sh1tters/marbles-game/issues"
+  },
+  "homepage": "https://github.com/Sh1tters/marbles-game#readme",
+  "dependencies": {
+    "electron": "^22.0.0"
+  }
+}
